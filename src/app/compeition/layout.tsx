@@ -4,8 +4,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 const baseSocialMediaShareData = {
-  title: "Sprice",
-  description: "Link Sharing Done Right",
+  title: "Sprice Competition",
+  description: "Enter our Competition",
   url: "https://sharing-links-woad.vercel.app/",
   siteName: "Sprice",
   images: [
@@ -13,7 +13,7 @@ const baseSocialMediaShareData = {
       url: "<generated>",
       width: 600,
       height: 600,
-      alt: "Some tasty watermelon",
+      alt: "Some tasty bread!",
       type: "<generated>",
     },
   ],
@@ -22,20 +22,16 @@ const baseSocialMediaShareData = {
 };
 
 export const metadata = {
-  title: "Sprice!",
-  description: "Link Sharing Done Right!",
+  title: "Sprice Competition!",
+  description: "Enter our Competition!",
   openGraph: baseSocialMediaShareData,
   twitter: baseSocialMediaShareData,
 };
 
-export default function RootLayout({
+export default function CompLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+}) {
+  return <section>{children}</section>;
 }
