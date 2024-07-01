@@ -1,8 +1,7 @@
-import Head from "next/head";
 import Image from "next/image";
 import styles from "./page.module.css";
 
-function App() {
+export default function App() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -92,38 +91,5 @@ function App() {
         </a>
       </div>
     </main>
-  );
-}
-
-function AppHead({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <Head>
-        <title>My Website</title>
-        <meta property="og:Sprice" content="Share that link!" />
-        <meta
-          property="og:Mobile Link Sharing Done Right"
-          content="Welcome to my website!"
-        />
-        <meta property="og:image" content="<generated>" />
-        <meta property="og:image:type" content="<generated>" />
-        <meta property="og:image:width" content="<generated>" />
-        <meta property="og:image:height" content="<generated>" />
-        <meta
-          property="og:url"
-          content="https://sharing-links-woad.vercel.app/"
-        />
-        <meta property="og:type" content="website" />
-      </Head>
-      {children}
-    </>
-  );
-}
-
-export default function Page() {
-  return (
-    <AppHead>
-      <App />
-    </AppHead>
   );
 }
